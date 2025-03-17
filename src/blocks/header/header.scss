@@ -1,4 +1,5 @@
 @use "../styles/variables"; 
+@use "functions" as *;
 
 .header {
   color: variables.$main-text-color;
@@ -20,6 +21,6 @@
   }
 
   .logo__text {
-    font-size: clamp(1.875rem, 1.7rem + 0.875vw, 2.75rem);
+    font-size: fluid-size(30, 44);
   }
 }

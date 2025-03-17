@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+@function fluid-size($min-size, $max-size, $min-width: 360, $max-width: 1920) {
+  $min-size: $min-size * 1px;
+  $max-size: $max-size * 1px;
+  $min-width: $min-width * 1px;
+  $max-width: $max-width * 1px;
+  $slope: math.div($max-size - $min-size, $max-width - $min-width);
+  $intercept: $min-size - $slope * $min-width;
+  $calc-expression: '(#{$slope} * 100vw + #{$intercept})';
+  @return clamp(#{$min-size}, calc(#{$calc-expression}), #{$max-size});
+}

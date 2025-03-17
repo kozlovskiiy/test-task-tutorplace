@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 .container {
-  padding-inline: clamp(15px, calc(15px + 265 * ((100vw - 360px) / 1600)), 280px);
+  padding-inline: fluid-size(15, 280);
 }

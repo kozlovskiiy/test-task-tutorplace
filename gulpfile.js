@@ -28,7 +28,7 @@ function html() {
 function css() {
   return gulp.src('src/blocks/**/*.css')
         .pipe(plumber())
-        .pipe(concat('bundle.css'))  // Все CSS файлы собираются в bundle.css
+        .pipe(concat('bundle.css'))
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({stream: true}));
 }
@@ -60,12 +60,12 @@ function pug() {
 }
 
 function scss() {
-  return gulp.src('src/blocks/**/*.scss')  // Получаем все SCSS файлы
-    .pipe(plumber())  // Защищает от ошибок
-    .pipe(sass().on('error', sass.logError))  // Компилируем SCSS в CSS
-    .pipe(concat('style.css'))  // Собираем все файлы в один
-    .pipe(gulp.dest('dist/'))  // Сохраняем как style.css в папке dist
-    .pipe(browserSync.reload({stream: true}));  // Обновляем страницу
+  return gulp.src('src/blocks/**/*.scss')
+    .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({stream: true}));
 }
 
 const build = gulp.series(clean, gulp.parallel(pug, scss, images));

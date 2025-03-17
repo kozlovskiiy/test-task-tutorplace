@@ -1,23 +1,27 @@
 doctype html
 html(lang="ru")
   head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     title Главная страница сайта
     link(rel="stylesheet" href="style.css")
+    
   body
-    include ../blocks/header/header.pug
+    .container
+      include ../blocks/header/header.pug
 
-    main.main
-      section#about
-        h2 О нас
-        p Здесь будет текст о компании.
+      main.main
+        section#about
+          h2 О нас
+          p Здесь будет текст о компании.
 
-      section#services
-        h2 Услуги
-        p Здесь будут описания услуг.
+        section#services
+          h2 Услуги
+          p Здесь будут описания услуг.
 
-      section#contact
-        h2 Контакты
-        p Здесь будут контактные данные.
+        section#contact
+          h2 Контакты
+          p Здесь будут контактные данные.
 
-    footer
-      p &copy; 2025 Ваша компания
+      footer
+        p &copy; 2025 Ваша компания

@@ -60,7 +60,7 @@ function pug() {
 }
 
 function scss() {
-  return gulp.src('src/blocks/**/*.scss')
+  return gulp.src('src/blocks/styles/main.scss')
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))

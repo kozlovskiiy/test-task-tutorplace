@@ -1,0 +1,3 @@
+.container {
+  padding-inline: clamp(15px, calc(15px + 265 * ((100vw - 320px) / 1600)), 280px);
+}

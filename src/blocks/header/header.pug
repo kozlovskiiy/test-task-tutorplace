@@ -1,14 +1,12 @@
-// Вставляем сюда header
 header.header
-  .logo
-    img(src='/images/logo.png', alt='Логотип')
-  nav.navigation
-    ul
-      li
-        a(href='#') Главная
-      li
-        a(href='#about') О нас
-      li
-        a(href='#services') Услуги
-      li
-        a(href='#contact') Контакты
+  a.logo(href="/") 
+    .logo__circle
+    p.logo__text AI
+  nav.header__menu
+    ul.header__menu-list
+      li.header__menu-item
+        a.header__menu-link Главная
+      li.header__menu-item 
+        a.header__menu-link Преимущества
+  include ../button/button.pug
+  +button('header__button', 'Получить доступ')

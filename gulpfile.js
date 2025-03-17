@@ -24,11 +24,12 @@ function html() {
         .pipe(browserSync.reload({stream: true}));
 }
 
+
 function css() {
   return gulp.src('src/blocks/**/*.css')
         .pipe(plumber())
-        .pipe(concat('bundle.css'))
-				.pipe(gulp.dest('dist/'))
+        .pipe(concat('bundle.css'))  // Все CSS файлы собираются в bundle.css
+        .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({stream: true}));
 }
 
@@ -57,14 +58,14 @@ function pug() {
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.reload({stream: true}));
 }
-function scss() {
-  return gulp.src('src/blocks/**/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.reload({stream: true}))
-        .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.reload({stream: true}));
 
+function scss() {
+  return gulp.src('src/blocks/**/*.scss')  // Получаем все SCSS файлы
+    .pipe(plumber())  // Защищает от ошибок
+    .pipe(sass().on('error', sass.logError))  // Компилируем SCSS в CSS
+    .pipe(concat('style.css'))  // Собираем все файлы в один
+    .pipe(gulp.dest('dist/'))  // Сохраняем как style.css в папке dist
+    .pipe(browserSync.reload({stream: true}));  // Обновляем страницу
 }
 
 const build = gulp.series(clean, gulp.parallel(pug, scss, images));

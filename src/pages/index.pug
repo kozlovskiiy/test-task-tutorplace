@@ -1,7 +1,23 @@
 doctype html
 html(lang="ru")
-    head
-        title Главная страница сайта
-        link(rel="stylesheet" href="style.css")
-    body
-        h1 ыввывыфыввыasdывывыв
+  head
+    title Главная страница сайта
+    link(rel="stylesheet" href="style.css")
+  body
+    include ../blocks/header/header.pug
+
+    main.main
+      section#about
+        h2 О нас
+        p Здесь будет текст о компании.
+
+      section#services
+        h2 Услуги
+        p Здесь будут описания услуг.
+
+      section#contact
+        h2 Контакты
+        p Здесь будут контактные данные.
+
+    footer
+      p &copy; 2025 Ваша компания

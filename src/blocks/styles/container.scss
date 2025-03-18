@@ -1,5 +1,7 @@
 @use "functions" as *;
+@use "../styles/variables"; 
 
 .container {
   padding-inline: fluid-size(15, 280);
+  background-color: variables.$background-color;
 }

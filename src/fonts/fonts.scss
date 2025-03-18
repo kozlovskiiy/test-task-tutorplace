@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Medium'), 
+    url('./fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: local('Involve Regular'), 
+    url('./fonts/Involve-Regular.otf') format('opentype'),
+    url('./fonts/Involve-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Involve';
+  src: local('Involve Medium'), 
+    url('./fonts/Involve-Medium.otf') format('opentype'),
+    url('./fonts/Involve-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: local('Evolventa Regular'), 
+    url('../fonts/Evolventa-Regular.otf') format('opentype'),
+    url('./fonts/Evolventa-Regular.ttf') format('truetype'),
+    url('./fonts/Evolventa-Regular.woff2') format('woff2'),
+    url('./fonts/Evolventa-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

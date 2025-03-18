@@ -1,0 +1,10 @@
+@use "../styles/variables"; 
+
+.button {
+  border: 1px solid variables.$main-text-color;
+  background-color: transparent;
+  cursor: pointer;
+  color: variables.$main-text-color;
+  border-radius: 15px;
+  padding: 18px 22px;
+}

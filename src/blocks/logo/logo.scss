@@ -1,0 +1,19 @@
+@use "functions" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo__circle {
+  width: 42px;
+  height: 42px;
+  background: radial-gradient(87.1% 87.1% at 40.32% 20.97%, #F706A3 0%, #5A73EF 100%);
+  border-radius: 50%;
+  box-shadow: inset 3px 4px 10.3px rgba(255, 255, 255, 0.25), inset -12px -17px 17.1px rgba(13, 12, 18, 0.3);
+}
+
+.logo__text {
+  font-size: fluid-size(30, 44);
+}

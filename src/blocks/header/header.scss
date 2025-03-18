@@ -1,8 +1,10 @@
 @use "../styles/variables"; 
+@use "functions" as *;
+
 .header {
   color: variables.$main-text-color;
   display: flex;
-  padding-block: 24px;
+  padding-block: fluid-size(7, 24);
   align-items: center;
   justify-content: space-between;
   font-size: variables.$main-font-size;
@@ -11,7 +13,7 @@
   
   &__menu {
     flex-grow: 1;
-    margin-left: 41.6%;
+    margin-left: fluid-size(20, 581)
   }
 
   &__menu-list {

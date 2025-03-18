@@ -9,5 +9,5 @@
 }
 
 .main {
-  @include mixins.flex-column(82px, column);
+  @include mixins.flex-column(fluid-size(56, 82), column);
 }

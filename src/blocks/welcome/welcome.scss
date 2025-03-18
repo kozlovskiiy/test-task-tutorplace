@@ -4,11 +4,11 @@
 .welcome {
   color: variables.$main-text-color;
   display: flex;
-  gap: 80px;
+  gap: fluid-size(0 ,80);
   font-family: variables.$font-evolventa;
 
   &__text-container {
-    padding-block: 185px;
+    padding-block: fluid-size(0, 185);
   }
 
   &__title {
@@ -16,8 +16,8 @@
     font-family: variables.$font-involve;
     font-weight: variables.$font-weight-medium;
     letter-spacing: 0.016em;
-    line-height: 73%;
-    margin-bottom: 22px;
+    line-height: fluid-size(42, 87);
+    margin-bottom: fluid-size(12, 22);
     background-image: linear-gradient(90deg, #F706A3 0%, #5A73EF 44%, #81F3F8 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -37,7 +37,7 @@
 
   &__paragraph {
     font-size: variables.$main-font-size;
-    margin-bottom: 72px;
+    margin-bottom: fluid-size(32, 72);
   }
 
   &__button {
@@ -45,7 +45,7 @@
     border: none;
     font-family: variables.$font-evolventa;
     font-size: variables.$main-font-size;
-    padding: 16px 24px;
+    padding: fluid-size(12, 16) 24px;
   }
 }
 

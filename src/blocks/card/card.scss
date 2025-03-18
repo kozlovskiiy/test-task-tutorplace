@@ -3,11 +3,11 @@
 
 .card {
   background-color: variables.$card-background-color;
-  padding: fluid-size(21, 30);
+  padding: fluid-size(17, 30);
   border-radius: 18px;
   width: fluid-size(300, 450);
   font-family: variables.$font-evolventa;
-  min-height: fluid-size(300, 332);
+  min-height: fluid-size(196, 332);
 
   &__image {
     width: 48px;

@@ -1,4 +1,6 @@
-@mixin flex-column($gap: 96px, $direction: column) {
+@use "functions" as *;
+
+@mixin flex-column($gap: fluid-size(10, 96), $direction: column) {
   display: flex;
   flex-direction: $direction;
   gap: $gap;

@@ -2,20 +2,20 @@
 .header {
   color: variables.$main-text-color;
   display: flex;
-  padding-block: 25.5px;
+  padding-block: 24px;
   align-items: center;
   justify-content: space-between;
   font-size: variables.$main-font-size;
-  font-family: 'Evolventa', serif;
-
+  font-family: variables.$font-evolventa;
+  font-weight: variables.$font-weight-regular;
   &__menu {
     flex-grow: 1;
-    margin-left: 30.26%;
+    margin-left: 41.6%;
   }
 
   &__menu-list {
     display: flex;
     align-items: center;
-    gap: 17.13%;
+    gap: 20.13%;
   }
 }

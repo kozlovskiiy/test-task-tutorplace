@@ -6,5 +6,8 @@
   cursor: pointer;
   color: variables.$main-text-color;
   border-radius: 15px;
-  padding: 18px 22px;
+  padding: 14px 22px;
+  font-size: variables.$small-font-size;
+  font-family: variables.$font-inter;
+  font-weight: variables.$font-weight-medium;
 }

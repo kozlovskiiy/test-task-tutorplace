@@ -11,3 +11,9 @@
   font-family: variables.$font-inter;
   font-weight: variables.$font-weight-medium;
 }
+
+.burger-menu__button {
+  background-color: variables.$button-pink-color;
+  border: none;
+  font-size: variables.$main-font-size;
+}

@@ -11,6 +11,7 @@
   cursor: pointer;
   position: relative;
   top: 7px;
+  z-index: 2;
 
   &::after,
   &::before {

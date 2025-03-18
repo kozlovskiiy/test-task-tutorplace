@@ -1,0 +1,51 @@
+@use "../styles/variables"; 
+@use "functions" as *;
+
+.welcome {
+  color: variables.$main-text-color;
+  display: flex;
+  gap: 80px;
+  font-family: variables.$font-evolventa;
+
+  &__text-container {
+    padding-block: 185px;
+  }
+
+  &__title {
+    font-size: variables.$hude-font-size;
+    font-family: variables.$font-involve;
+    font-weight: variables.$font-weight-medium;
+    letter-spacing: 0.016em;
+    line-height: 73%;
+    margin-bottom: 22px;
+    background-image: linear-gradient(90deg, #F706A3 0%, #5A73EF 44%, #81F3F8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__title-small-text {
+    font-size: variables.$big-font-size;
+    color: variables.$main-text-color;
+  }
+
+  &__image {
+    display: block;
+    width: 54%;
+    height: 54%;
+  }
+
+  &__paragraph {
+    font-size: variables.$main-font-size;
+    margin-bottom: 72px;
+  }
+
+  &__button {
+    background-color: variables.$second-text-color;
+    border: none;
+    font-family: variables.$font-evolventa;
+    font-size: variables.$main-font-size;
+    padding: 16px 24px;
+  }
+}
+

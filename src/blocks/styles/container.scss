@@ -4,4 +4,7 @@
 .container {
   padding-inline: fluid-size(15, 260);
   background-color: variables.$background-color;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
 }

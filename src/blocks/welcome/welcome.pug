@@ -1,0 +1,9 @@
+section.welcome
+  .welcome__text-container 
+    h1.welcome__title Нейросеть 
+      br
+      span.welcome__title-small-text может все!
+    p.welcome__paragraph Мы уже живем в этой удивительной реальности
+    include ../button/button.pug
+    +button('welcome__button', 'Погрузиться в новый мир')
+  img.welcome__image(src='./images/welcome-image.png')

@@ -1,11 +1,6 @@
 header.header
   include ../logo/logo.pug
-  nav.header__menu
-    ul.header__menu-list
-      li.header__menu-item
-        a.header__menu-link Главная
-      li.header__menu-item 
-        a.header__menu-link Преимущества
+  include ../navigation/navigation.pug
   include ../button/button.pug
   include ../burger-button/burger-button.pug
   +button('header__button', 'Получить доступ')

@@ -1,0 +1,12 @@
+@use "functions" as *;
+
+.navigation {
+  flex-grow: 1;
+  margin-left: fluid-size(20, 581);
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 20.13%;
+  }
+}

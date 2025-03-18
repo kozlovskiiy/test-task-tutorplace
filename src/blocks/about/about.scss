@@ -1,7 +1,11 @@
 @use "../styles/variables"; 
+@use "functions" as *;
+@use "mixins";
 
 .about {
   color: variables.$main-text-color;
+  @include mixins.flex-column();
+  padding-bottom: fluid-size(36, 84);
 
   &__text-container {
     text-align: center;
@@ -11,10 +15,21 @@
     font-size: variables.$big-font-size;
     font-family: variables.$font-involve;
     font-weight: variables.$font-weight-medium;
+    margin-bottom: fluid-size(12, 20);
+    letter-spacing: 0.016em;
   }
 
   &__paragraph {
     font-size: variables.$main-font-size;
     font-family: variables.$font-evolventa;
+    width: fluid-size(330, 700);
+    margin: 0 auto;
+  }
+
+  &__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid-size(15, 30);
+    justify-content: center;
   }
 }

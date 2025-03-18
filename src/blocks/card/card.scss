@@ -1,0 +1,26 @@
+@use "../styles/variables"; 
+@use "functions" as *;
+
+.card {
+  background-color: variables.$card-background-color;
+  padding: fluid-size(21, 30);
+  border-radius: 18px;
+  width: fluid-size(300, 450);
+  font-family: variables.$font-evolventa;
+  min-height: fluid-size(300, 332);
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    margin-bottom: fluid-size(18, 24);
+  }
+
+  &__title {
+    font-size: variables.$main-font-size;
+    margin-bottom: fluid-size(18, 24);
+  }
+
+  &__text {
+    font-size: variables.$small-font-size;
+  }
+}

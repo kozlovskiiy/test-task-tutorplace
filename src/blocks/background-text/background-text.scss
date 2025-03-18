@@ -1,0 +1,30 @@
+@use "../styles/variables"; 
+@use "functions" as *;
+
+.background-text {
+  font-family: variables.$font-involve;
+  font-weight: variables.$font-weight-bold;
+  font-size: fluid-size(48, 213);
+  font-weight: variables.$font-weight-regular;
+  color: transparent; 
+  opacity: 0.3;
+  position: absolute;
+  top: fluid-size(0, 157);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  text-shadow:
+    -1px 0 variables.$main-text-color,
+    0 1px variables.$main-text-color,
+    1 0 variables.$main-text-color,
+    0 -1px variables.$main-text-color;
+}
+
+
+  @supports((text-stroke: 2px variables.$main-text-color) or (-webkit-text-stroke: 2px variables.$main-text-color)) {
+    .background-text {
+      -webkit-text-stroke: 1px variables.$main-text-color;
+      text-stroke: 1px variables.$main-text-color;
+      text-shadow: none;
+    }
+  }

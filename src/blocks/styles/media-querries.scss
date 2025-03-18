@@ -27,6 +27,7 @@
     display: flex;
     flex-grow: 1;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -36,6 +37,10 @@
 
   .header__button {
     display: none;
+  }
+
+  .burger-button {
+    display: block;
   }
 }
 

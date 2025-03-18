@@ -1,0 +1,60 @@
+@use "../styles/variables"; 
+@use "functions" as *;
+
+.burger-button {
+  padding: 0;
+  width: fluid-size(18, 30);
+  height: fluid-size(12, 30);
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$main-text-color;
+    transition: transform 0.3s, 0.3s;
+  }
+
+  &::before {
+    top: 0;
+    transition: transform 0.3s, top 0.3s 0.3s;
+  }
+
+  &::after {
+    bottom: 0;
+    transition: transform 0.3s, bottom 0.3s 0.3s;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$main-text-color;
+  }
+
+  &--opened {
+    &__line {
+      display: none;
+    }
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      transition: top 0.3s, transform 0.3s 0.3s;
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+      transition: bottom 0.3s, transform 0.3s 0.3s;
+    }
+  }
+}

@@ -6,6 +6,8 @@
   color: variables.$main-text-color;
   @include mixins.flex-column();
   padding-bottom: fluid-size(36, 84);
+  position: relative;
+  z-index: 1;
 
   &__text-container {
     text-align: center;
@@ -33,4 +35,7 @@
     justify-content: center;
   }
 
+  &__paragraph-highlight {
+    color: variables.$second-text-color;
+  }
 }

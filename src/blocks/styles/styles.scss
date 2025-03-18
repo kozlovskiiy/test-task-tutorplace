@@ -1,10 +1,13 @@
 @use "functions" as *;
 @use "../styles/variables"; 
+@use "mixins";
 
 .container {
   padding-inline: fluid-size(15, 260);
   background-color: variables.$background-color;
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
+  @include mixins.flex-column;
+}
+
+.main {
+  @include mixins.flex-column;
 }

@@ -1,0 +1,6 @@
+mixin card(image, title, text)
+  article.card
+    if image
+      img.card__image(src=image, alt=title)
+    h3.card__title= title
+    p.card__text= text

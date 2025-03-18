@@ -1,0 +1,20 @@
+@use "../styles/variables"; 
+
+.about {
+  color: variables.$main-text-color;
+
+  &__text-container {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: variables.$big-font-size;
+    font-family: variables.$font-involve;
+    font-weight: variables.$font-weight-medium;
+  }
+
+  &__paragraph {
+    font-size: variables.$main-font-size;
+    font-family: variables.$font-evolventa;
+  }
+}

@@ -1,5 +1,6 @@
 @use "../styles/variables"; 
 @use "functions" as *;
+@use "mixins";
 
 .material-symbols-outlined {
   font-size: fluid-size(30, 50) !important;
@@ -102,6 +103,7 @@
     background-color: variables.$button-pink-color;
     border: none;
     height: fluid-size(36, 62);
+    @include mixins.buttonStyles('colored');
   }
 
   @keyframes modal-appear {

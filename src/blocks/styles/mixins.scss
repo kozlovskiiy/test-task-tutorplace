@@ -1,7 +1,50 @@
 @use "functions" as *;
+@use "variables"; 
 
 @mixin flex-column($gap: fluid-size(10, 96), $direction: column) {
   display: flex;
   flex-direction: $direction;
   gap: $gap;
+}
+
+@mixin buttonStyles($buttonType) {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
+  
+  @if $buttonType == 'colored' {
+
+    &:hover {
+      background-color: variables.$main-text-color;
+      box-shadow: 0px 0px 30px 2px variables.$second-text-color;
+      color: #000;
+    }
+
+    &:active {
+      background-color: variables.$main-text-color;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background-color: variables.$main-text-color;
+      color: variables.$background-color;
+      opacity: 0.3;
+    }
+  }
+
+  @else if $buttonType == 'transparent' {
+
+    &:hover {
+      background-color: variables.$second-text-color;
+      border: none;
+    }
+
+    &:active {
+      background-color: variables.$button-pink-color;
+    }
+
+    &:disabled {
+      background-color: variables.$button-pink-color;
+      opacity: 0.3;
+      border: none;
+    }
+  }
 }

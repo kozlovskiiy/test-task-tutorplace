@@ -1,5 +1,6 @@
 @use "../styles/variables"; 
 @use "functions" as *;
+@use "mixins";
 
 .welcome {
   color: variables.$main-text-color;
@@ -46,6 +47,8 @@
     font-family: variables.$font-evolventa;
     font-size: variables.$main-font-size;
     padding: fluid-size(12, 16) 24px;
+
+    @include mixins.buttonStyles('colored');
   }
 }
 

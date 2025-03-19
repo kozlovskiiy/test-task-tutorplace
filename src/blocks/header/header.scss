@@ -1,3 +1,65 @@
+// @use "../styles/variables"; 
+// @use "functions" as *;
+
+// .header {
+//   color: variables.$main-text-color;
+//   display: flex;
+//   padding-block: fluid-size(7, 24);
+//   align-items: center;
+//   justify-content: space-between;
+//   font-size: variables.$main-font-size;
+//   font-family: variables.$font-evolventa;
+//   font-weight: variables.$font-weight-regular;
+//   position: relative;
+
+//   &__button {
+//     z-index: 2;
+//   }
+
+//   &--mobile {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 279px;
+//     background-color: variables.$background-color;
+//     padding: 12px 15px 30px;
+
+//     .navigation {
+//       display: block;
+//       align-self: center;
+//       opacity: 0.3;
+//       font-size: 16px;
+
+//       &__menu-list {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 36px;
+//       }
+//     }
+
+//     .logo {
+//       justify-self: flex-start;
+//     }
+
+//     .header__button {
+//       align-self: center;
+//       font-size: 16px;
+//       width: 76%;
+//       display: block;
+//       background-color: variables.$button-pink-color;
+//       border: none;
+//       text-align: center;
+//     }
+
+//     .burger-button {
+//       right: 10px;
+//     }
+//   }
+// }
+
 @use "../styles/variables"; 
 @use "functions" as *;
 
@@ -10,4 +72,55 @@
   font-size: variables.$main-font-size;
   font-family: variables.$font-evolventa;
   font-weight: variables.$font-weight-regular;
+  position: relative;
+
+  &--mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 279px;
+    background-color: variables.$background-color;
+    padding: 12px 15px 30px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 3;
+    
+    &.active {
+      transform: translateY(0);
+    }
+
+    .navigation {
+      display: block;
+      align-self: center;
+      opacity: 0.3;
+      font-size: 16px;
+
+      &__menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+      }
+    }
+
+    .logo {
+      justify-self: flex-start;
+    }
+
+    .header__button {
+      align-self: center;
+      font-size: 16px;
+      width: 76%;
+      display: block;
+      background-color: variables.$button-pink-color;
+      border: none;
+      text-align: center;
+    }
+
+    .burger-button {
+      right: 10px;
+    }
+  }
 }

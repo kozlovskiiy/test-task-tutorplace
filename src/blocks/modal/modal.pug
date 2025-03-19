@@ -1,0 +1,11 @@
+.modal
+    .modal__content
+      button.modal__close(type="button")
+        span.material-symbols-outlined close
+      h3.modal__title Овладей нейросетями!
+      p.modal__description Получи в подарок доступ ко всем курсам
+      img.modal__image(src="./images/present.png", alt="Изображение на котором есть два подарка")
+      form.modal__form
+        input#email.modal__input(type="email", placeholder="Введите e-mail")
+        include ../button/button.pug
+        +button('modal__button', 'Получить доступ', 'submit')

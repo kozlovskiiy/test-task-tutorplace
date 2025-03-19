@@ -1,0 +1,114 @@
+@use "../styles/variables"; 
+@use "functions" as *;
+
+.material-symbols-outlined {
+  font-size: fluid-size(30, 50) !important;
+  color: variables.$main-text-color;
+  font-weight: 100 !important;
+}
+
+.modal {
+  background-color: variables.$card-background-color;
+  color: variables.$main-text-color;
+  max-width: 688px;
+  min-width: 280px;
+  text-align: center;
+  border-radius: 24px;
+  padding-block-start: fluid-size(15, 30);
+  padding-inline: fluid-size(15, 60);
+  padding-block-end: fluid-size(15, 60);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  
+  &.modal-active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    animation: modal-appear 0.5s ease-out forwards;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close {
+    align-self: flex-end;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: fluid-size(30, 44);
+    font-family: variables.$font-involve;
+    font-weight: variables.$font-weight-regular;
+    margin-top: fluid-size(15, 30);
+    margin-bottom: fluid-size(6, 12);
+  }
+
+  &__description {
+    font-family: variables.$font-evolventa;
+    font-size: variables.$modals-font-size;
+    margin-bottom: fluid-size(15, 30);
+  }
+
+  &__image {
+    width: fluid-size(270, 509);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: fluid-size(15, 30);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    background-color: #1B1A2C;
+    border: none;
+    height: fluid-size(36, 62);
+    color: variables.$main-text-color;
+    font-size: variables.$modals-font-size;
+    border-radius: 18px;
+    margin-bottom: fluid-size(15, 30);
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      text-align: center;
+    }
+
+    &:focus {
+      border: 1px solid #81F3F8;
+    }
+
+    &:invalid {
+      border: 1px solid variables.$second-text-color;
+      color: variables.$second-text-color;
+    }
+  }
+
+  &__button {
+    background-color: variables.$button-pink-color;
+    border: none;
+    height: fluid-size(36, 62);
+  }
+
+  @keyframes modal-appear {
+    to {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

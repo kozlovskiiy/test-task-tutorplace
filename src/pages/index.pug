@@ -3,14 +3,20 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="description" content="Страница где вы можете купить курс по нейросетям")
+    meta(name="keywords" content="AI, CHATGPT, нейросеть, обучение, курс")
+    meta(property="og:title" content="Курс по нейросетям")
+    meta(property="og:description" content="Стань профессионалом в нейросетях")
+    meta(property="og:image" content="")
+    meta(property="og:url" content="")
     title Главная страница сайта
     link(rel="stylesheet" href="style.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close")
   body
     .container
       include ../blocks/header/header.pug
-
       main.main
         include ../blocks/welcome/welcome.pug
         include ../blocks/about/about.pug
         include ../blocks/modal/modal.pug
+  script(src="scripts/main.js")

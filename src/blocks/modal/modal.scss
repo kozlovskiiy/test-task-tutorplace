@@ -23,12 +23,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  visibility: hidden;
   opacity: 0;
   pointer-events: none;
   
-  &.modal-active {
-    visibility: visible;
+  &.modal--active {
     opacity: 1;
     pointer-events: all;
     animation: modal-appear 0.5s ease-out forwards;
@@ -107,10 +105,13 @@
   }
 
   @keyframes modal-appear {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -55%);
+    }
     to {
-      visibility: visible;
       opacity: 1;
-      pointer-events: all;
+      transform: translate(-50%, -50%);
     }
   }
 }
